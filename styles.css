@@ -1,0 +1,115 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #333;
+  text-align: center;
+}
+
+header h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+  margin: 50px 0;
+}
+
+/* Circling Images Animation */
+.circle-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.circle-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -100px 0;
+  animation: circle 5s linear infinite;
+}
+
+.img2 { animation-delay: 1.5s; }
+.img3 { animation-delay: 3s; }
+
+@keyframes circle {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+/* Bouncing Ball Animation */
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-150px); }
+}
+
+/* Click Box Animation */
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  margin: 20px auto;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pulse {
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
